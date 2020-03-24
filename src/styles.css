@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    /*background: linear-gradient(to left, #52ace7, #6dd5fa);*/
+    /*background: linear-gradient(to right, #f46b45, #eea849); naranja?*/
+}
+.h1-strong{
+    font-size: 35px;
+    font-weight:bold;
+    margin-left: 13px;
+    margin: 20;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+.navigation{
+    padding: 0px !important;
+}
+
+.navbar{
+    border-radius: opx !important;
+    background: #e53c37 !important;
+    border:none;
+}
+
+.navbar *{
+    color: #FFFFFF !important;
+}

@@ -1,6 +1,6 @@
 export class Publication{
     constructor(
-        public Id: string,
+        public _id: string,
         public text: string,
         public file: string,
         public createdAt: string,

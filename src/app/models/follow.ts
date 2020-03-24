@@ -1,6 +1,6 @@
 export class Follow{
     constructor(
-        public Id: string,
+        public _id: string,
         public user: string,
         public followed: string
     ){}
