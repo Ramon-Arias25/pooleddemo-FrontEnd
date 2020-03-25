@@ -8,6 +8,9 @@ import { User } from '../models/user';
 @Injectable()
 export class UserService{
     public url:string;
+    public identity;
+    public token;
+    public stats;
 
     constructor(public _http: HttpClient){
         this.url = GLOBAL.url;
@@ -20,4 +23,56 @@ export class UserService{
         return this._http.post(this.url+'register', params, {headers:headers});
     }
 
+    signup(user, gettoken = null): Observable<any>{
+        if(gettoken != null){
+            user.gettoken = gettoken;
+        }
+
+        let params = JSON.stringify(user);
+        let headers = new HttpHeaders().set('Content-Type' , 'application/json');
+
+        return this._http.post(this.url+'login',params,{headers:headers});
+    }
+
+    getIdentity(){
+        let identity = JSON.parse(localStorage.getItem('identity'));
+
+        if(identity != "undefined"){
+            this.identity = identity;
+        }else{
+            this.identity = null;
+        }
+        return this.identity;
+    }
+    getToken(){
+        let token = JSON.parse(localStorage.getItem('token'));
+
+        if(token != "undefined"){
+            this.token = token;
+        }else{
+            this.token = null;
+        }
+        return this.token;
+    }
+
+    getStats(){
+        let stats = JSON.parse(localStorage.getItem('stats'));
+
+        if(stats != "undefined"){
+            this.stats = stats;
+        }else{
+            this.stats = null;
+        }
+        return this.stats;
+    }
+    
+    getCounters(userId = null): Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type','application/hson')
+                                        .set('Authorization',this.getToken());
+        if(userId != null){
+            return this._http.get(this.url+'conters/'+userId,{headers:headers});
+        }else{
+            return this._http.get(this.url+'counters',{headers: headers});
+        }
+    }
 }

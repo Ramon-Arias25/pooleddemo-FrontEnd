@@ -24,3 +24,7 @@ body{
 .navbar *{
     color: #FFFFFF !important;
 }
+.dropdown-menu *{
+    color: #000000 !important;
+    margin-right: 2px;
+}
