@@ -25,6 +25,7 @@
     <ul class="nav navbar-nav ml-auto" *ngIf="identity">
       <li class="avatar">
         <!--cargar imagen del usuario-->
+        <img class="img w-35 h-auto"src="{{url + 'get/user/image/' + identity.image }}" *ngIf="identity && identity.image" />
       </li>
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -38,9 +39,9 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a  [routerLink]="['/edit-profile']">
               <span class="fas fa-cogs"></span>
-              Settings
+               Edit Profile
             </a>
           </li>
           <li>

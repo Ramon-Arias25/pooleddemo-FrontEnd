@@ -19,12 +19,34 @@ body{
     border-radius: opx !important;
     background: #e53c37 !important;
     border:none;
+    vertical-align: middle;
 }
 
 .navbar *{
     color: #FFFFFF !important;
 }
 .dropdown-menu *{
-    color: #000000 !important;
+    color: #cc1717 !important;
     margin-right: 2px;
+    vertical-align: auto;
+}
+.nav .avatar{
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 0px;
+    margin-right: 10px;
+}
+.nav .avatar .img{
+    width: 38px;
+    height: 38PX;
+}
+
+.navigation .navbar .nav>.open>a,.navigation .navbar .nav>.open>a:focus{
+    background: #cc1717 !important;
+}
+.navbar-expand .navbar-nav {
+    flex-direction: row;
+    align-items: center;
 }
