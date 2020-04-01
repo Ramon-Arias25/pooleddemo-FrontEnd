@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+/*body{
     /*background: linear-gradient(to left, #52ace7, #6dd5fa);*/
     /*background: linear-gradient(to right, #f46b45, #eea849); naranja?*/
-}
+/*}*/
+
 .h1-strong{
     font-size: 35px;
     font-weight:bold;
@@ -39,8 +40,7 @@ body{
     margin-right: 10px;
 }
 .nav .avatar .img{
-    width: 38px;
-    height: 38PX;
+    width: 100%
 }
 
 .navigation .navbar .nav>.open>a,.navigation .navbar .nav>.open>a:focus{
@@ -49,4 +49,60 @@ body{
 .navbar-expand .navbar-nav {
     flex-direction: row;
     align-items: center;
+}
+.panel-body .image-user{
+    border: 2px;
+}
+
+.panel-body .image-user{
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-left: 25px;
+}
+
+.panel-body .image-user a img{
+    width: 100%;
+}
+.panel-body .image-user{
+    vertical-align: middle;
+}
+
+.item-user{
+    border: solid;
+    border-radius: 50px;
+    border-color: #DEDEDE;
+    border-width: 1px;
+    margin-bottom: 2px;
+    padding: 5px;
+}
+.panel-body .User-name{
+    margin-top: 10px;
+}
+.panel-body .User-name .nickname{
+    color:#969393;
+}
+.panel-body .User-name .name-surname a{
+    color:#444;
+    font-weight: bold;
+}
+.panel-body p{
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+.pagination{
+  margin-left: auto;
+  margin-right: auto;
+}
+.people-body{
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-fw{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 50px;
 }

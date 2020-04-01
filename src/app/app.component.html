@@ -11,7 +11,7 @@
         <a class="nav-link" href="#"><span class="fa fa-th-list"></span> Timeline</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><span class="fa fa-users"></span> People</a>
+        <a class="nav-link" [routerLink]="['/people']" [routerLinkActive]="['active']"><span class="fa fa-users"></span> People</a>
       </li>
     </ul>
     <ul class="nav navbar-nav ml-auto" *ngIf="!identity">
