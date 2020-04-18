@@ -25,8 +25,14 @@
                         </a>
                         <div class="sub-item-publication">
                             <div class="publication-text">
-                                {{publication.text}}
+                                <span>{{publication.text}}</span>
+                                <div *ngIf="publication.file">
+                                    <!-- <img src="{{ url + 'get/user/image/' + publication.file }}" > -->
+                                </div>
                             </div>
+                        </div>
+                        <div class="date footerpub">
+                            {{ (publication.create_at | amFromUnix) | amLocale: 'es' | amTimeAgo }}
                         </div>
                     </div>
                 </div>
