@@ -13,11 +13,11 @@ declare var $:any;
 
 
  @Component({
-     selector: 'timeline',
-     templateUrl: './timeline.component.html',
+     selector: 'publications',
+     templateUrl: './publications.component.html',
      providers: [UserService, PublicationService]
  })
- export class TimelineComponent implements OnInit{
+ export class PublicationsComponent implements OnInit{
     public title: string;
     public identity;
     public token;
@@ -35,7 +35,7 @@ declare var $:any;
         private myUserService: UserService,
         private myPublicationService: PublicationService
     ){
-        this.title = 'Timeline';
+        this.title = 'publications';
         this.identity = this.myUserService.getIdentity();
         this.token = this.myUserService.getToken();
         this.url = GLOBAL.url;
@@ -43,7 +43,7 @@ declare var $:any;
     }
 
     ngOnInit(){
-        console.log('TimeLine Component is load!');
+        console.log('publications Component is load!');
         this.getPublications(this.page);
     }
 
@@ -99,9 +99,5 @@ declare var $:any;
         }
 
         this.getPublications(this.page, true);
-    }
-
-    refresh(event){
-        this.getPublications(1);
     }
  }

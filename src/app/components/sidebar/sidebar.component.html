@@ -64,8 +64,8 @@
     </div>
     <div class="alert alert-danger" *ngIf="status == 'error'">
         Publicacion NO enviada correctamente
-    </div>
-    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm)" class="col-lg-10">
+    </div> 
+    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm);sendPublications($event);" class="col-lg-10">
         <p>
             <label>Que estas pensando?</label>
             <textarea name="text" #text="ngModel" [(ngModel)]="publication.text" class="form-control" required></textarea>
