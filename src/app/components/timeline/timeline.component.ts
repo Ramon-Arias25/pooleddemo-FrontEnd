@@ -4,7 +4,13 @@
  import { GLOBAL } from '../../services/global';
  import { UserService } from '../../services/user.service';
  import { PublicationService } from '../../services/publication.service';
- //import { $ } from "jquery";
+ 
+ // import { $ } from "jquery";
+ //import * as $ from 'jquery';
+ declare var jQuery:any;
+declare var $:any;
+ 
+
 
  @Component({
      selector: 'timeline',
@@ -44,7 +50,7 @@
     getPublications(page, adding = false){
         this.myPublicationService.getPublication(this.token, page).subscribe(
             response => {
-                console.log(response);
+                //console.log(response);
                 if(response.publications){
                     
                     this.total = response.total_items;
