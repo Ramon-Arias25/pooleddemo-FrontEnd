@@ -1,0 +1,48 @@
+<!--<section class="cover-sec">
+    <img src="http://via.placeholder.com/1600x400" alt="">
+</section> 
+-->
+<div id="profile" class="container" >
+    <div class="row">
+        <!--<div class="col-lg-4">
+            <sidebar></sidebar>
+        </div>-->
+        <div class="col-lg-6 profile-body">
+            <div class="user-tab-sec" *ngIf="user" >
+                <div class="avatar" *ngIf="user" >
+                    <img id="img" src="{{ url + 'get/user/image/' + user.image }}" *ngIf="user.image" />
+                    <img id="img" src="assets/user.webp" *ngIf="!user.image" />
+                </div>
+                <div class="user-tab-info">
+                    <h3>{{user.nick}}</h3>
+                    <div class="star-descp">
+                        <span>{{user.name + '  ' + user.surname}}</span>
+                    </div>
+                </div>
+                <!--star-descp end-->
+                <!--<div class="tab-feed">
+                    <ul>
+                    <li data-tab="feed-dd" class="active">
+                        <a href="#" title="">
+                        <img src="assets/ic1.png" alt="">
+                        <span>Feed</span>
+                        </a>
+                    </li>
+                    <li data-tab="info-dd">
+                        <a href="#" title="">
+                        <img src="assets/ic2.png" alt="">
+                        <span>Info</span>
+                        </a>
+                    </li>
+                    <li data-tab="portfolio-dd">
+                        <a href="#" title="">
+                        <img src="assets/ic3.png" alt="">
+                        <span>Portfolio</span>
+                        </a>
+                    </li>
+                    </ul>
+                </div>--><!-- tab-feed end-->
+            </div><!--user-tab-sec end-->
+        </div>
+    </div>
+</div>

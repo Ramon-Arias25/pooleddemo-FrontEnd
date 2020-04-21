@@ -238,3 +238,119 @@ a{
 #btn-mas{
     margin-top: 15px;
 }
+
+/*NUEVOS ESTILOS DEL TEMA wORKwISE para perfil del usuario*/
+#profile .avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    border-style: double;
+    border-color:#777676;
+    padding: 0px;
+}
+.cover-sec img {
+	width: 100%;
+}
+.user-tab-info .pinfo{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.user-tab-info{
+    text-align: center;
+}
+.user-tab-sec {
+	float: left;
+	width: 100%;
+	padding-top: 4px;
+}
+.user-tab-sec h3 {
+	color: #000000;
+	font-size: 40px;
+	font-weight: 400;
+	text-transform: capitalize;
+	margin-bottom: 7px;
+}
+.star-descp {
+	width: 100%;
+    margin-bottom: 50px;
+}
+.star-descp > a {
+	float: left;
+	color: #51a5fb;
+	font-size: 18px;
+	font-weight: 600;
+	margin-left: 20px;
+	text-decoration: underline;
+}
+.star-descp > a:hover {
+	color: #51a5fb;
+}
+.star-descp span, p {
+	/*float: left;*/
+	color: #686868;
+	font-size: 18px;
+	font-weight: 600;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.star-descp > ul {
+	float: left;
+}
+.star-descp ul li {
+	display: inline-block;
+}
+.star-descp ul li i {
+	color: #b7ce1f;
+	font-size: 16px;
+}
+.tab-feed {
+	float: left;
+	width: 100%;
+	margin-bottom: 47px;
+}
+.tab-feed ul {
+	float: left;
+	width: 100%;
+}
+.tab-feed ul li {
+	display: inline-block;
+	margin-right: 35px;
+	text-align: center;
+}
+.tab-feed.st2 ul li {
+	margin-right: 30px;
+}
+.tab-feed ul li:last-child {
+	margin-right: 0;
+}
+.tab-feed ul li.active img {
+	filter: grayscale(0);
+}
+.tab-feed ul li.active span {
+	color: #e44d3a;
+}
+.tab-feed ul li img {
+	float: none;
+	margin-bottom: 5px;
+	filter: grayscale(100%);
+}
+.tab-feed ul li span {
+	display: block;
+	color: #b2b2b2;
+	font-weight: 400;
+	font-size: 18px;
+}
+.tab-feed ul li:last-child {
+	margin-right: 0;
+}
+.profile-body{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
