@@ -18,7 +18,7 @@ export class FollowService{
         let params = JSON.stringify(follow);
         let headers = new HttpHeaders().set('Content-Type', 'aplication/json')
                                         .set('Authorization',token);
-        console.log(params);
+        //console.log(params);
         return this._http.post(this.url+'follow/'+ followed, params, {headers: headers});
     }
 

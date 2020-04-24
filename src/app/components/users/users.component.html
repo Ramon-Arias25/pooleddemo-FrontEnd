@@ -15,14 +15,14 @@
                                     <img src="assets/user.webp" *ngIf="!user.image">
                                 </a>
                             </div>
-                            <div class="User-name">
-                                <p class="name-surname">
+                            <div class="row User-name">
+                                <p class="nickname">
                                     <a [routerLink]="['/profile',user._id]">
-                                        {{user.name + ' ' + user.surname}}
+                                        &nbsp; {{user.nick}} &nbsp;
                                     </a>
                                 </p>
-                                <p class="nickname">
-                                    {{user.nick}}
+                                <p class="name-surname">
+                                    {{user.name + ' ' + user.surname}}
                                 </p>
                             </div>
                             <!-- seguir/dejar de seguir usuarios-->
@@ -49,7 +49,6 @@
                                         <span class="fas fa-check"></span> Followed
                                     </ng-template>
                                  </button> 
-        
                             </div>
                         </div>
                     </div>

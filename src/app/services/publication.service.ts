@@ -29,6 +29,13 @@ export class PublicationService{
         return this.myHttp.get(this.url + 'publications/'+page, {headers: headers});
     }
 
+    getPublicationByUser(token, id , page ):Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type','application/json')
+                                        .set('Authorization',token);
+        
+        return this.myHttp.get(this.url + 'publications/'+ id + '/' + page, {headers: headers});
+    }
+
     deletePublication(token, id):Observable<any>{
         let headers = new HttpHeaders().set('Content-Type','application/json')
                                         .set('Authorization',token);

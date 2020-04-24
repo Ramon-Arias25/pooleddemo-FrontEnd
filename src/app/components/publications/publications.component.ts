@@ -1,4 +1,4 @@
- import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit, Input } from '@angular/core';
  import { Router, ActivatedRoute, Params } from '@angular/router';
  import { Publication } from '../../models/publication';
  import { GLOBAL } from '../../services/global';
@@ -16,7 +16,7 @@ declare var $:any;
      selector: 'publications',
      templateUrl: './publications.component.html',
      providers: [UserService, PublicationService]
- })
+ }) 
  export class PublicationsComponent implements OnInit{
     public title: string;
     public identity;
@@ -28,6 +28,8 @@ declare var $:any;
     public pages;
     public itemsPerPage;
     public publications: Publication[];
+    public noMore = false;
+    @Input() userId: string;
 
     constructor(
         private myRoute: ActivatedRoute,
@@ -44,29 +46,30 @@ declare var $:any;
 
     ngOnInit(){
         console.log('publications Component is load!');
-        this.getPublications(this.page);
+        this.getPublicationsByUser(this.userId,this.page);
     }
 
-    getPublications(page, adding = false){
-        this.myPublicationService.getPublication(this.token, page).subscribe(
+    getPublicationsByUser(userId, page, adding = false){
+        this.myPublicationService.getPublicationByUser(this.token,userId, page).subscribe(
             response => {
                 //console.log(response);
                 if(response.publications){
-                    
                     this.total = response.total_items;
                     this.pages = response.pages;
                     this.itemsPerPage = response.itemsPerPage;
-
+                    if(response.publications.length > 0){
+                        this.noMore=false;
+                    }else{
+                        this.noMore=true;
+                    }
                     if(!adding){
                         this.publications = response.publications;
                     }else{
                         var arrayA = this.publications;
                         var arrayB = response.publications;
                         this.publications = arrayA.concat(arrayB);
-
                         $('html,body').animate({scrollTop: $('body').prop('scrollHeight')}, 1000);
                     }
-
                     if(page > this.pages){
                         //this.myRouter.navigate(['/home']);
                     }
@@ -84,11 +87,11 @@ declare var $:any;
         );
     }
 
-    public noMore = false;
     viewMore(){
         //console.log(this.page);
         //console.log(this.pages);
         //if(this.publications.length == this.total){
+        
         if(this.page  == this.pages){
             this.noMore = true;
         }else{
@@ -98,6 +101,6 @@ declare var $:any;
             }
         }
 
-        this.getPublications(this.page, true);
+        this.getPublicationsByUser(this.userId, this.page, true);
     }
  }

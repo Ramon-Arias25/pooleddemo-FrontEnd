@@ -6,13 +6,14 @@
 a{
     text-decoration: none !important;
 }
-.h1-strong{
-    font-size: 35px; 
-    font-weight:bold;
-    margin-left: 13px;
-    margin: 20;
-    padding: 15px;
-    border-bottom: 1px solid #eee;
+.h1-strong, .aprofile .h1-strong {
+    font-size: 35px !important; 
+    font-weight:bold !important;
+    margin-left: 0px !important;
+    margin: 20 !important;
+    padding: 15px !important;
+    border-bottom: 1px solid #eee !important;
+    color: #000000 !important;
 }
 .navigation{
     padding: 0px !important;
@@ -92,10 +93,10 @@ a{
 .panel-body .User-name{
     margin-top: 10px;
 }
-.panel-body .User-name .nickname{
+.panel-body .User-name .name-surname{
     color:#969393;
 }
-.panel-body .User-name .name-surname a{
+.panel-body .User-name .nickname a{
     color:#444;
     font-weight: bold;
 }
@@ -247,22 +248,25 @@ a{
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0px;
+    margin-top: -100px;
     border-style: double;
     border-color:#777676;
     padding: 0px;
+    background-color: #FFFFFF;
 }
 .cover-sec img {
-	width: 100%;
+    width: 100%;
 }
+/*
 .user-tab-info .pinfo{
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-}
+}*/
+/*
 .user-tab-info{
     text-align: center;
-}
+}*/
 .user-tab-sec {
 	float: left;
 	width: 100%;
@@ -277,7 +281,7 @@ a{
 }
 .star-descp {
 	width: 100%;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 .star-descp > a {
 	float: left;
@@ -352,5 +356,10 @@ a{
 .profile-body{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+}
+.follow{
+    margin-top: auto;
+}
+#profile .btnfw{
+    color : #ffffff !important;
 }

@@ -1,4 +1,4 @@
-<div id="publications">
+<div id="publications" *ngIf="publications">
     <div *ngFor="let publication of publications" class="item-publication">
         <div class="panel-body">
             <a href="#">
@@ -8,7 +8,7 @@
                         <img class= "imgUsrPub" src="assets/user.webp" *ngIf="!publication.user.image">
                     </div>
                     <div>
-                        <b><p>{{'@'+ publication.user.nick }} &nbsp; </p></b>
+                        <b><p>{{publication.user.nick }} &nbsp; </p></b>
                     </div>
                     <div>
                         <span> {{publication.user.name + ' ' + publication.user.surname}}</span>
@@ -28,19 +28,11 @@
             </div>
         </div>
     </div>
-</div>
-<!--<div class="pagination">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link"[routerLink]="['/timeline', prevPage]">Previous</a></li>
-        <li *ngIf="page"class="page-item"><a class="page-link"[routerLink]="['/timeline', page ]">{{page}} / {{pages}}</a></li>
-        <li *ngIf="!page"class="page-item"><a class="page-link"[routerLink]="['/timeline', 1 ]">1 / {{pages}}</a></li>
-        <li class="page-item"><a class="page-link"[routerLink]="['/timeline/', nextPage]">Next</a></li>
-    </ul>
-</div>-->
-<div class="col-lg-12 text-center" id="btn-mas">
-    <p>
-        <button class="btn btn-success" (click)="viewMore()" *ngIf="!noMore">
-            Ver más publicaciones
-        </button>
-    </p>
-</div>
+    <div class="col-lg-12 text-center" id="btn-mas" >
+        <p>
+            <button class="btn btn-success" (click)="viewMore()" *ngIf="!noMore">
+                Ver más publicaciones
+            </button>
+        </p>
+    </div>
+</div> 

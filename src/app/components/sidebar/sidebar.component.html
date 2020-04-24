@@ -5,8 +5,10 @@
     </div>
     <div>
         <div class="name-surname">
-            <h1 class="h1-strong">{{identity.nick}}</h1>
-            <a href="#" class="username">
+            <a [routerLink]="['/profile',identity._id]" class="aprofile">
+                <h1  class="h1-strong">{{identity.nick}}</h1>
+            </a>
+            <a [routerLink]="['/profile',identity._id]" class="username">
                 {{identity.name + ' ' + identity.surname}}
             </a>
             <!--<p class="nickname">{{identity.nick}}</p>-->
