@@ -101,7 +101,18 @@ declare var $:any;
         this.getPublications(this.page, true);
     }
 
-    refresh(event){
+    refresh(event = null){
         this.getPublications(1);
+    }
+
+    deletePublication(id){
+        this.myPublicationService.deletePublication(this.token,id).subscribe(
+            response => {
+                this.refresh();
+            },
+            error => {
+                console.log(<any>error);
+            }
+        );
     }
  }
