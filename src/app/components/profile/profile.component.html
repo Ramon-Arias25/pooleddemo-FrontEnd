@@ -49,7 +49,7 @@
                     <div class="row">
                         <div class="col-lg-4 stats">
                             <div class="following-data">
-                                <a href="#">
+                                <a [routerLink]="['/following', user._id, 1]">
                                     <span class="label-stats">
                                         Siguiendo
                                     </span>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="col-lg-4 stats">
                             <div class="following-data">
-                                <a href="#">
+                                <a [routerLink]="['/follower', user._id, 1]">
                                     <span class="label-stats">
                                         Seguidores
                                     </span>

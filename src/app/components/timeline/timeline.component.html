@@ -67,7 +67,9 @@
                         </div>
                         <div class="sub-item-publication">
                             <div class="col-lg-12" *ngIf="publication.file">
-                                <img src="{{ url + 'publication/get/' + publication.file }}" class="col-lg-12">
+                                <div class="sub-item">
+                                    <img src="{{ url + 'publication/get/' + publication.file }}" class="sub-item-img">
+                                </div>
                             </div>
                             <div class="publication-text">
                                 <span>{{publication.text}}</span>

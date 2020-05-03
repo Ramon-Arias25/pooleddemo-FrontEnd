@@ -54,10 +54,10 @@ export class ProfileComponent implements OnInit{
                     //console.log(response);
                     //console.log(this.identity);
                     this.user = response.user;
-                    this.followers = response.followers.includes( this.identity._id ) 
+                    this.followers = response.followers.includes( this.identity._id );
                     //console.log('lo sigo ' + this.followers );
 
-                    this.following = response.following.includes( this.identity._id ) 
+                    this.following = response.following.includes( this.identity._id ); 
                     //console.log('me sigue ' + this.followers );
 
                 }else{

@@ -8,7 +8,7 @@ import { Follow } from '../models/follow';
 @Injectable()
 export class FollowService{
     public url: string;
-
+ 
     constructor(public _http: HttpClient){
         this.url = GLOBAL.url;
     }
@@ -27,5 +27,29 @@ export class FollowService{
                                         .set('Authorization',token);
         
         return this._http.delete(this.url+'follows/'+ id, {headers: headers});
+    }
+
+    getFollowing(token, userId = null, page):Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type', 'aplication/json')
+                                        .set('Authorization',token);
+        
+        var url = this.url+'following/';
+        if(userId != null){
+            var url = this.url+'following/'+userId+'/'+page;    
+        }
+        //console.log(url);
+        return this._http.get(url, {headers: headers});
+    }
+
+    getFollower(token, userId = null, page):Observable<any>{
+        let headers = new HttpHeaders().set('Content-Type', 'aplication/json')
+                                        .set('Authorization',token);
+        
+        var url = this.url+'followed/';
+        if(userId != null){
+            var url = this.url+'followed/'+userId+'/'+page;    
+        }
+        //console.log(url);
+        return this._http.get(url, {headers: headers});
     }
 }
