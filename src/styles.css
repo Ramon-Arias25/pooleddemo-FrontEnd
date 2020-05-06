@@ -24,8 +24,16 @@ a{
     background: #e53c37 !important;
     border:none;
     vertical-align: middle;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
 }
-
+.nav-link{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.nav-link.active{
+    background: #cc1717 !important;
+}
 .navbar *{
     color: #FFFFFF !important;
 }
@@ -442,3 +450,26 @@ a{
   #publications .dropdown:hover .dropdown-content {
     display: block;
   }
+ .list-group,.list-group-item {
+    border-radius: 50px !important;
+    vertical-align: middle;
+}
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #e53c37;
+    border-color: #e53c37;
+}
+#container-messages{
+    width: 95% !important;
+    margin-top: 10px;
+}
+.h3-strong, .aprofile .h1-strong {
+    /*font-size: 35px !important; 
+    font-weight:bold !important;*/
+    margin-left: 0px !important;
+    margin: 20 !important;
+    padding: 15px !important;
+    border-bottom: 1px solid #eee !important;
+    color: #000000 !important;
+}
