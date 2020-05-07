@@ -11,19 +11,21 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FollowingComponent } from './components/following/following.component';
 import { FollowerComponent } from './components/follower/follower.component';
+ 
+import { UserGuard } from './services/user.guard';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
-    {path: 'edit-profile', component: UserEditComponent},
-    {path: 'people/:page', component: UsersComponent},
-    {path: 'people', component: UsersComponent},
-    {path: 'timeline', component: TimelineComponent},
-    {path: 'profile/:id', component: ProfileComponent},
-    {path: 'following/:id/:page', component: FollowingComponent},
-    {path: 'follower/:id/:page', component: FollowerComponent},
+    {path: 'edit-profile', component: UserEditComponent, canActivate:[UserGuard]},
+    {path: 'people/:page', component: UsersComponent, canActivate:[UserGuard]},
+    {path: 'people', component: UsersComponent, canActivate:[UserGuard]},
+    {path: 'timeline', component: TimelineComponent, canActivate:[UserGuard]},
+    {path: 'profile/:id', component: ProfileComponent, canActivate:[UserGuard]},
+    {path: 'following/:id/:page', component: FollowingComponent, canActivate:[UserGuard]},
+    {path: 'follower/:id/:page', component: FollowerComponent, canActivate:[UserGuard]},
     {path: '**', component: HomeComponent},
 ];
 
